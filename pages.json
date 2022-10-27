@@ -26,6 +26,15 @@
                 "enablePullDownRefresh": false
             }
             
+        },
+        {
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
         }
     ],
 	"globalStyle": {
