@@ -1,5 +1,8 @@
 <template>
   <view>
+    <!-- 使用自定义的搜索组件 -->
+    <my-search  @click="search"></my-search>
+    
     <view class="scroll-view-container">
       <!-- 左侧滑动区域 -->
       <scroll-view class="left-scroll-view" scroll-y="true" :style="{height: wh+ 'px'}">
@@ -69,13 +72,19 @@
         uni.navigateTo({
           url: '/subpkg/goods_list/goods_list?cid=' + item3.cat_id
         })
+      },
+      search(){
+        console.log(1);
+        uni.navigateTo({
+          url : '/subpkg/search/search'
+        })
       }
     },
       
     onLoad(){
       const sysInfo = uni.getSystemInfoSync ()
       //console.log(sysInfo)
-      this.wh = sysInfo.windowHeight
+      this.wh = sysInfo.windowHeight -50 
       // 调用获取分类列表数据的方法
       this.getCateList()
     }
